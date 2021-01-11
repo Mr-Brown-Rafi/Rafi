@@ -1,0 +1,100 @@
+LINQ Language integrated query
+
+--> desigined by Microsoft (.net 3.5)
+
+--> designed to retrive data from collections easily.
+
+--> if we can write query on a table why can't we write a query on collections.
+
+(data base designer :: sql  ,   application desinger :: LINQ )
+
+--> LINQ is a query language very much simillar to Sql , but  using LINQ we can 
+	write queries on wide variety of data sources like ::
+	Arrays
+	Collections
+	Database tables
+	data sets
+	xml data
+
+--> Syntax to write LINQ:
+		----------------------------------------------------------
+		|from <alias> in <coll or arr> [<clauses>] select <alias>  |
+		-----------------------------------------------------------
+
+		simiple difference is key words are jumblled compared to sql query.
+
+		where ever we required column names have to be write an alias name.
+
+		---------------------------------------------------------------------------------
+		| var brr = from i in arr select i where i > 40 orderby i desecending select i;  |
+		----------------------------------------------------------------------------------
+
+		var is a keyword which is implicitly typed local varible and data type is identified by type of values.
+
+--> WHERE , GROUPBY, HAVING , ORDERBY (claueses)
+
+--> name space System.Linq
+
+--> LINQ to Objects : Arrays, Collections, etc
+--> LINQ to Databases: DataTables, Relation Database Tables
+			--> LINQ to ADO.Net
+			--> LINQ to SQL
+			--> LIMQ to Entities(sql server and orcle)
+--> LInq to XML files
+		
+		
+--> LINQ to SQL
+_______________
+
+	-->using this we can write queries on relational databases(sql server)
+
+	--> It's a query a language that introduced in .Net 3.5 framework for working 
+	with relations databases i.e: SQL server.
+
+
+	--> and also it allows to us to perform INSERT, DELETE , UPDATE operations
+	CURD operations
+	C : create (insert)
+	U : update
+	R : read (select)
+	D : delete
+
+	note: we can also call "stored procedures by using Linq to Sql".
+
+	--> Already there is a language known as SQL using which we can interact with Sql server 
+	with the help of ADO.Net then what is the need of LINQ again?.
+		
+		SQL   => SQl server
+			
+			1) Runtime Syntax checking of sql stmts.		
+
+			2) Not type safe.
+
+			3) No intellisence support.
+
+			4) Debugging of sql stmts is not possible.
+
+			5) Code is a cobination of Objects Oriented and Relational.
+			---------------------------------------------------------------------
+			|"insert into student values("+textbox1.Text+", '"+textbox2.text+"')"|
+			---------------------------------------------------------------------
+		LINQ   =>  SQL server
+
+			1)compli time syntax checking.
+
+			2) Type safe.
+
+			3) Inmtellisecnce support is available.
+
+			4) Debugging of LINQ stmts is possible.
+
+			5) Pure object oriented code.
+
+				when we working with LINQ 
+
+					table		=> 	class
+						-columns	=>	properties
+						-row / records	=>	instance
+					stored procedures =>	methodes
+
+
